@@ -5,6 +5,7 @@ public class ApplicationConstants {
 	// EHCache Configuration file name
 	String EHCACHE_CONF_FILE = "ehcache.xml";
 
+	
 	// Crypto Constants
 	public static final String CRYPTO_PROPERTIES = "crypto.properties";
 	public static final String CRYPTO_PASSWORD = "password";
