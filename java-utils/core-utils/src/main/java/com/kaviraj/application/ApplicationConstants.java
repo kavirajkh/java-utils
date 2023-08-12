@@ -17,4 +17,6 @@ public class ApplicationConstants {
 	public static final String CRYPTO_CVALUE = "cValue";
 	public static final String CRYPTO_TYPE = "type";
 	public static final String CRYPTO_FORMAT = "format";
+	
+	
 }

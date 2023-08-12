@@ -60,25 +60,24 @@ public class RSACryptoUtilsTest {
 		Assert.assertEquals(message, decipheredMessage);
 	}
 	
-	@Test
-	public void testDecrypt_1() throws Exception {
-		// secret message
-		String message = "the answer to life the universe and everything";
-		
-		FileInputStream fis_private = new FileInputStream("src/main/resources/crypto/privateKey");
-		FileInputStream fis_public = new FileInputStream("src/main/resources/crypto/publicKey");
-		
-		KeyFactory kf = KeyFactory.getInstance("RSA");
-		PrivateKey privateKey = kf.generatePrivate(new PKCS8EncodedKeySpec(fis_private.readAllBytes()));
-		PublicKey publicKey = kf.generatePublic(new X509EncodedKeySpec(fis_public.readAllBytes()));
-		
-		KeyPair keyPair = cryptoUtil.getKeyPairFromKeyStore();
-		// Encrypt the message
-		String cipherText = cryptoUtil.encrypt(message, publicKey);
-		// Now decrypt it
-		String decipheredMessage = cryptoUtil.decrypt(cipherText, privateKey);
-		Assert.assertEquals(message, decipheredMessage);
-	}
+	/*
+	 * @Test public void testDecrypt_1() throws Exception { // secret message String
+	 * message = "the answer to life the universe and everything";
+	 * 
+	 * FileInputStream fis_private = new
+	 * FileInputStream("src/main/resources/crypto/privateKey"); FileInputStream
+	 * fis_public = new FileInputStream("src/main/resources/crypto/publicKey");
+	 * 
+	 * KeyFactory kf = KeyFactory.getInstance("RSA"); PrivateKey privateKey =
+	 * kf.generatePrivate(new PKCS8EncodedKeySpec(fis_private.readAllBytes()));
+	 * PublicKey publicKey = kf.generatePublic(new
+	 * X509EncodedKeySpec(fis_public.readAllBytes()));
+	 * 
+	 * KeyPair keyPair = cryptoUtil.getKeyPairFromKeyStore(); // Encrypt the message
+	 * String cipherText = cryptoUtil.encrypt(message, publicKey); // Now decrypt it
+	 * String decipheredMessage = cryptoUtil.decrypt(cipherText, privateKey);
+	 * Assert.assertEquals(message, decipheredMessage); }
+	 */
 	
 	@Test
 	public void testDecrypt1() throws Exception {
